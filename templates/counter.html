@@ -1,0 +1,13 @@
+<h3>The amount of word is {{amount}}</h3>
+
+{%load static %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}" />
+
+<h1>Hello {{name}}, Insert your sentence</h1>
+
+<form method="POST" action="counter">
+  {% csrf_token %}
+  <textarea name="text" rows="50" cols="100"></textarea><br />
+  <input type="submit" />
+</form>
